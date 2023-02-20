@@ -1,0 +1,8 @@
+{"Data":[{"eName":"Usages and Functions","eNumber":"","page":"https://www.youtube.com/watch?v=sD0Z0VvbIDE","category":"pac 3500"}
+,{"eName":"Operation","eNumber":"","page":"https://www.youtube.com/watch?v=eZdJj_ExkFE","category":"pac 3500"}
+,{"eName":"Alarms","eNumber":"","page":"https://www.youtube.com/watch?v=5ha0FlEnL0M","category":"pac 3500"}
+,{"eName":"Pump Operation","eNumber":"","page":"https://www.youtube.com/watch?v=uvNYO6Wl-7I","category":"pac 3500"}
+,{"eName":"Assistant Wizards","eNumber":"","page":"https://www.youtube.com/watch?v=2B7X7vhGg_E","category":"pac 3500"}
+,{"eName":"Configuration of Settings","eNumber":"","page":"https://www.youtube.com/watch?v=2OgveuCo8v4","category":"pac 3500"}
+,{"eName":"Bluetooth Operation","eNumber":"","page":"https://www.youtube.com/watch?v=7JAkcE9f7jg","category":"pac 3500"}
+]}

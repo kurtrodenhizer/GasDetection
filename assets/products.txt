@@ -1,0 +1,35 @@
+[{"title":"Detector Tubes","havsubcategoty":"true","data":"tubesSubCat",
+"subcategory":
+
+[{"title":"Short-term Tubes","cat":"ShortTerm"},
+
+{"title":"Diffusion Tubes","cat":"Diffusion"},
+
+{"title":"Simultest Sets","cat":"Simultest"},
+
+{"title":"Military / Responder Tubes","cat":"Military"},
+
+{"title":"Aerotest Tubes for Compressed Air","cat":"Aerotest"},
+
+{"title":"Sampling Tubes/Systems","cat":"Sampling"},
+
+{"title":"Tube Pumps","cat":"Pumps"}]},
+
+{"title":"MicroTubes","havsubcategoty":"false","data":"Micro","subcategory":[]},
+
+{"title":"CMS Chips","havsubcategoty":"false","data":"CMSChips","subcategory":[]},
+
+{"title":"Single Gas","havsubcategoty":"false","data":"single","subcategory":[]},
+
+{"title":"Multi Gas","havsubcategoty":"false","data":"multi","subcategory":[]},
+
+{"title":"Sensors","havsubcategoty":"true","data":"sensorsSubCat","subcategory":
+
+
+[{"title":"CatEx","cat":"CatEx"},
+{"title":"Electrochemical","cat":"ElectroChem"},
+
+{"title":"Infrared","cat":"Infared"},
+{"title":"PID","cat":"Pid"}]},
+
+{"title":"Calibration & Bump Testing","havsubcategoty":"false","data":"calibration","subcategory":[]}]

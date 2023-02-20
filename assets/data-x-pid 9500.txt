@@ -1,0 +1,3 @@
+{"Data":[{"eName":"Customer Support Page","eNumber":"","page":"https://www.draeger.com/en-us_us/Products/X-pid-9000-9500","category":"x-am-2000"}
+,{"eName":"YouTube Video","eNumber":"","page":"https://www.youtube.com/watch?v=SOFY2XsZhW8","category":"x-am-2000"}
+,{"eName":"Technical Manual","eNumber":"","page":"https://www.draeger.com/Products/Content/x-pid-8500-9000-9500-technical-manual-ifu-9033850-en.pdf","category":"x-am-2000"}]}
