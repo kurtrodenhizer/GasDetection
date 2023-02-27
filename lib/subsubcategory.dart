@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 import 'main.dart';
 
 class SubSubcategoryScreen extends StatefulWidget {
@@ -26,6 +27,7 @@ class _SubSubcategoryScreenState extends State<SubSubcategoryScreen> {
   // ProgressDialog pr;
   String pathPDF = "";
   bool loading = false;
+  File? pdfFile;
 
   @override
   void initState() {
@@ -41,7 +43,13 @@ class _SubSubcategoryScreenState extends State<SubSubcategoryScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(color: Color(0xFF000000)),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -341,26 +349,10 @@ Future<File?> downloadFile(String url, String name) async {
   final file = File('${appStorage.path}/$name');
 
   try {
-    Dio? dio;
-    if (dio == null) {
-      BaseOptions options = new BaseOptions(
-        baseUrl: "your base url",
-        receiveDataWhenStatusError: true,
-        connectTimeout: 120,
-        receiveTimeout: 120,
-      );
-
-      dio = new Dio(options);
-    }
-
-    final response = await dio.get(url,
-        options: Options(
-            responseType: ResponseType.bytes,
-            followRedirects: false,
-            receiveTimeout: 120));
-
+    final http.Response response = await http.get(Uri.parse(url));
+    final Uint8List bytes = response.bodyBytes;
     final raf = file.openSync(mode: FileMode.write);
-    raf.writeFromSync(response.data);
+    raf.writeFromSync(bytes);
     await raf.close();
 
     return file;

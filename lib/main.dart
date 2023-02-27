@@ -32,6 +32,12 @@ void main() => runApp(new MaterialApp(
     theme: ThemeData(
         primaryColor: Color(0xFFEEEFF1),
         accentColor: Colors.white70,
+        appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(
+            color: Color(0xFF000000),
+          ),
+        ),
+        iconTheme: IconThemeData(color: Color(0xFF000000)),
         fontFamily: "Schyler"),
     debugShowCheckedModeBanner: false,
     home: SplashScreen(),
@@ -309,7 +315,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        title: Text(toolbarTitle),
+        title: Text(
+          toolbarTitle,
+          style: TextStyle(color: Color(0xFF000000)),
+        ),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -337,6 +346,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           color: Colors.grey,
         ),
         itemBuilder: (context, index) {
+          gasguidelist.sort((a, b) => a.eName.compareTo(b.eName));
+
           // ignore: unnecessary_statements
           ('Index 0 : ${gasguidelist[index].page}');
           return InkWell(
@@ -426,6 +437,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           color: Colors.grey,
         ),
         itemBuilder: (context, index) {
+          productlist.sort((a, b) => a.title.compareTo(b.title));
           return InkWell(
             onTap: () {
               if (productlist[index].subcategory.length == 0) {
@@ -790,6 +802,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         ),
         itemBuilder: (context, index) {
           // return Divider();
+          morelist.sort((a, b) => a.title.compareTo(b.title));
           return InkWell(
             onTap: () {
               //  Navigator.pushNamed(context, "/subcat");

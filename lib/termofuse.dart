@@ -147,8 +147,8 @@ class _TCState extends State<TCScreen> {
                   child: Image.asset('assets/gasdetectionpg.png',fit: BoxFit.fitWidth,)),*/
             Padding(
                 padding: EdgeInsets.only(top: topIagree),
-                child: ElevatedButton(
-                    onPressed: () {
+                child: GestureDetector(
+                    onTap: () {
                       createFileOfPdfUrl("app_terms").then((file) {
                         setState(() {
                           //pathPDF = file.path;
@@ -169,21 +169,42 @@ class _TCState extends State<TCScreen> {
                     //   padding: EdgeInsets.only(left: 65.0,right: 65.0),
                     child: Image.asset(
                       'assets/iagree.png',
-                      scale: scaleigree,
+                      // scale: scaleigree,
                     ))),
             Padding(
               padding:
-                  EdgeInsets.only(left: 65.0, right: 65.0, top: topAcceptBtn),
+                  EdgeInsets.only(left: 100.0, right: 100.0, top: topAcceptBtn),
               child: ElevatedButton(
-                  onPressed: () {
-                    _setTcAccepted();
-                    Navigator.pushReplacementNamed(context, "/home");
-                  },
-                  // padding: EdgeInsets.only(left: 0, right: 0, top: 0),
-                  child: Image.asset(
-                    'assets/acceptbtn.png',
-                    scale: scaleAcceptBtn,
-                  )),
+                onPressed: () {
+                  _setTcAccepted();
+                  Navigator.pushReplacementNamed(context, "/home");
+                },
+                // padding: EdgeInsets.only(left: 0, right: 0, top: 0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.play_arrow,
+                      color: Colors.white70,
+                      size: 30,
+                    ),
+                    SizedBox(width: 25),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "Accept",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                // Image.asset(
+                //   'assets/acceptbtn.png',
+                //   scale: scaleAcceptBtn,
+                // ),
+              ),
             ),
 
             /* FlatButton(
