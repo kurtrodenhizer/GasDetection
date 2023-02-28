@@ -72,7 +72,13 @@ class TabbedComponentDemoScaffold extends StatelessWidget {
       length: demos.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(
+            title,
+            style: TextStyle(color: Color(0xFF000000)),
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.black, //change your color here
+          ),
           actions: (actions)
             ..addAll(
               <Widget>[

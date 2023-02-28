@@ -934,7 +934,13 @@ class PDFScreen extends StatelessWidget {
         children: <Widget>[
           PDFViewerScaffold(
             appBar: AppBar(
-              title: Text(name),
+              title: Text(
+                name,
+                style: TextStyle(color: Color(0xFF000000)),
+              ),
+              iconTheme: IconThemeData(
+                color: Colors.black, //change your color here
+              ),
               centerTitle: true,
               flexibleSpace: Container(
                 decoration: BoxDecoration(

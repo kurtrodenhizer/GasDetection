@@ -26,7 +26,13 @@ class _SubcategoryScreenState extends State<SubcategoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.product.title),
+        title: Text(
+          widget.product.title,
+          style: TextStyle(color: Color(0xFF000000)),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(

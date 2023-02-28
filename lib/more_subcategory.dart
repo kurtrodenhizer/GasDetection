@@ -34,7 +34,13 @@ class _SubSubcategoryScreenState extends State<MoreSubSubcategoryScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(color: Color(0xFF000000)),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(

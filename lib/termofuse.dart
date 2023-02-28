@@ -108,15 +108,14 @@ class _TCState extends State<TCScreen> {
 
             Container(
                 color: Colors.white,
+                width: MediaQuery.of(context).size.width,
                 child: Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 10),
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Image.asset(
-                        'assets/tcdager.png',
-                        alignment: Alignment.centerRight,
-                        scale: scaleDrageImg,
-                      ),
+                    padding: EdgeInsets.only(top: 40, bottom: 10),
+                    child: Image.asset(
+                      'assets/tcdager.png',
+                      height: 50,
+                      alignment: Alignment.topCenter,
+                      scale: scaleDrageImg,
                     ))),
             ConstrainedBox(
               constraints: const BoxConstraints(minWidth: double.infinity),

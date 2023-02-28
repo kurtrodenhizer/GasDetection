@@ -222,7 +222,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(color: Color(0xFF000000)),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         actions: <Widget>[
           new IconButton(
             onPressed: () {
