@@ -172,8 +172,7 @@ class _TCState extends State<TCScreen> {
                       // scale: scaleigree,
                     ))),
             Padding(
-              padding:
-                  EdgeInsets.only(left: 100.0, right: 100.0, top: topAcceptBtn),
+              padding: EdgeInsets.only(top: topAcceptBtn),
               child: ElevatedButton(
                 onPressed: () {
                   _setTcAccepted();
@@ -181,15 +180,16 @@ class _TCState extends State<TCScreen> {
                 },
                 // padding: EdgeInsets.only(left: 0, right: 0, top: 0),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
                       Icons.play_arrow,
                       color: Colors.white70,
                       size: 30,
                     ),
-                    SizedBox(width: 25),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 30),
                       child: Text(
                         "Accept",
                         style: TextStyle(

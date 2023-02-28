@@ -17,4 +17,4 @@
 {"title":"X-zone 5800","cat":"x-zone 5800"}]},
 {"title":"Contact Information","page":"","havsubcategoty":"false","data":"contact","subcategory":[]},
 {"title":"Find a Distributor, Sales Rep or Service Center","page":"http://www.draeger.us/sites/enus_us/Pages/Industry/Contact_Searchresult.aspx?Country=US&language=en&ContactType=&Zip=&Division=483&FreeText=&BA=&default=true","havsubcategoty":"http://www.draeger.us/sites/enus_us/Pages/Industry/Contact_Searchresult.aspx?Country=US&language=en&ContactType=&Zip=&Division=483&FreeText=&BA=&default=true","data":"","subcategory":[]},
-{"title":"Version ID - 20230118","page":"","havsubcategoty":"false","data":"","subcategory":[]}]
+{"title":"Version ID - 20230228","page":"","havsubcategoty":"false","data":"","subcategory":[]}]
