@@ -99,120 +99,142 @@ class _TCState extends State<TCScreen> {
     //   final Orientation orientation = MediaQuery.of(context).orientation; // get the orientation
     if (MediaQuery.of(context).orientation == Orientation.portrait) {
       return Scaffold(
-          body: Container(
-        color: Color(0xFFE5E5E5),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            // Image.asset("assets/acceptbtn.png"),
+          body: SafeArea(
+        child: Container(
+          color: Color(0xFFE5E5E5),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              // Image.asset("assets/acceptbtn.png"),
 
-            Container(
-                color: Colors.white,
-                width: MediaQuery.of(context).size.width,
-                child: Padding(
-                    padding: EdgeInsets.only(top: 40, bottom: 10),
-                    child: Image.asset(
-                      'assets/tcdager.png',
-                      height: 50,
-                      alignment: Alignment.topCenter,
-                      scale: scaleDrageImg,
-                    ))),
-            ConstrainedBox(
-              constraints: const BoxConstraints(minWidth: double.infinity),
-              child: Padding(
-                  padding: EdgeInsets.only(top: topGasDetectionText),
-                  child: Text(
-                    "Gas Detection",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: fontsizeGasDetectionText,
+              Container(
+                  color: Colors.white,
+                  child: Padding(
+                      padding: EdgeInsets.only(top: 10, bottom: 10),
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Image.asset(
+                          'assets/tcdager.png',
+                          alignment: Alignment.centerRight,
+                          scale: scaleDrageImg,
+                        ),
+                      ))),
+              Padding(
+                padding: EdgeInsets.only(top: topGasDetectionText),
+                child: Text(
+                  "   Gas \nDetection",
+                  // textAlign: TextAlign.center,
+                  style: TextStyle(
+                    height: 0.9,
+                    fontSize: fontsizeGasDetectionText,
 
-                      fontFamily: 'RobotoMono',
-                      fontStyle: FontStyle.normal,
-                      color: Color(0xFF666666), // insert your font size here
-                    ),
-                  )) /*Image.asset('assets/gasdetectionpg.png',fit: BoxFit.fitWidth,)*/,
-            ),
-            /*FlatButton(
-                  onPressed: (){
-                  },
-                 padding: EdgeInsets.only(left: 0.0,right: 0.0),
-                  child: Image.asset('assets/tcdager.png',fit: BoxFit.fitWidth,)),
-              FlatButton(
-                  onPressed: (){
-                  },
-                  padding: EdgeInsets.only(left: 0.0,right: 0.0),
-                 // padding: EdgeInsets.only(left: 65.0,right: 65.0),
-                  child: Image.asset('assets/gasdetectionpg.png',fit: BoxFit.fitWidth,)),*/
-            Padding(
-                padding: EdgeInsets.only(top: topIagree),
-                child: GestureDetector(
-                    onTap: () {
-                      createFileOfPdfUrl("app_terms").then((file) {
-                        setState(() {
-                          //pathPDF = file.path;
-                          //   pr.hide();
-                          var now = new DateTime.now();
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PDFScreen(
-                                    file.path, "Terms of Use", "app_terms")),
-                          );
-                        });
-                      });
+                    fontFamily: 'RobotoMono',
+                    fontStyle: FontStyle.normal,
+                    color: Color(0xFF666666), // insert your font size here
+                  ),
+                ),
+              ),
+              // ConstrainedBox(
+              //   constraints: const BoxConstraints(minWidth: double.infinity),
+              //   child: Padding(
+              //       padding: EdgeInsets.only(top: topGasDetectionText),
+              // child: Text(
+              //   "Gas Detection",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //     fontSize: fontsizeGasDetectionText,
 
-                      //SharedPreferences prefs = await SharedPreferences.getInstance();
+              //     fontFamily: 'RobotoMono',
+              //     fontStyle: FontStyle.normal,
+              //     color: Color(0xFF666666), // insert your font size here
+              //   ),
+              //       )) /*Image.asset('assets/gasdetectionpg.png',fit: BoxFit.fitWidth,)*/,
+              // ),
+              /*FlatButton(
+                    onPressed: (){
                     },
-                    // padding: EdgeInsets.only(left: 0.0, right: 0.0, ),
-                    //   padding: EdgeInsets.only(left: 65.0,right: 65.0),
-                    child: Image.asset(
-                      'assets/iagree.png',
-                      // scale: scaleigree,
-                    ))),
-            Padding(
-              padding: EdgeInsets.only(top: topAcceptBtn),
-              child: ElevatedButton(
-                onPressed: () {
-                  _setTcAccepted();
-                  Navigator.pushReplacementNamed(context, "/home");
-                },
-                // padding: EdgeInsets.only(left: 0, right: 0, top: 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      Icons.play_arrow,
-                      color: Colors.white70,
-                      size: 30,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 30),
-                      child: Text(
-                        "Accept",
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w500,
+                   padding: EdgeInsets.only(left: 0.0,right: 0.0),
+                    child: Image.asset('assets/tcdager.png',fit: BoxFit.fitWidth,)),
+                FlatButton(
+                    onPressed: (){
+                    },
+                    padding: EdgeInsets.only(left: 0.0,right: 0.0),
+                   // padding: EdgeInsets.only(left: 65.0,right: 65.0),
+                    child: Image.asset('assets/gasdetectionpg.png',fit: BoxFit.fitWidth,)),*/
+              Padding(
+                  padding: EdgeInsets.only(top: topIagree),
+                  child: GestureDetector(
+                      onTap: () {
+                        createFileOfPdfUrl("app_terms").then((file) {
+                          setState(() {
+                            //pathPDF = file.path;
+                            //   pr.hide();
+                            var now = new DateTime.now();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PDFScreen(
+                                      file.path, "Terms of Use", "app_terms")),
+                            );
+                          });
+                        });
+
+                        //SharedPreferences prefs = await SharedPreferences.getInstance();
+                      },
+                      // padding: EdgeInsets.only(left: 0.0, right: 0.0, ),
+                      //   padding: EdgeInsets.only(left: 65.0,right: 65.0),
+                      child: Image.asset(
+                        'assets/iagree.png',
+                        // scale: scaleigree,
+                      ))),
+              Padding(
+                padding: EdgeInsets.only(top: topAcceptBtn),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(
+                          Color.fromARGB(255, 66, 120, 236).withOpacity(0.55))),
+                  onPressed: () {
+                    _setTcAccepted();
+                    Navigator.pushReplacementNamed(context, "/home");
+                  },
+                  // padding: EdgeInsets.only(left: 0, right: 0, top: 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.play_arrow,
+                        color: Colors.white60,
+                        size: 30,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 30),
+                        child: Text(
+                          "Accept",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  // Image.asset(
+                  //   'assets/acceptbtn.png',
+                  //   scale: scaleAcceptBtn,
+                  // ),
                 ),
-                // Image.asset(
-                //   'assets/acceptbtn.png',
-                //   scale: scaleAcceptBtn,
-                // ),
               ),
-            ),
 
-            /* FlatButton(
-                  onPressed: (){
-                    exit(0);
-                  },
-                  padding: EdgeInsets.only(left: 65.0,right: 65.0,top: 30),
-                  child: Image.asset('assets/declinebtn.png')),*/
-          ],
+              /* FlatButton(
+                    onPressed: (){
+                      exit(0);
+                    },
+                    padding: EdgeInsets.only(left: 65.0,right: 65.0,top: 30),
+                    child: Image.asset('assets/declinebtn.png')),*/
+            ],
+          ),
         ),
       ));
     } else {
